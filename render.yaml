@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    name: referral-key-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        value: "5191323229"
+      - key: CHANNEL_ID
+        sync: false
+      - key: CHANNEL_LINK
+        sync: false
+      - key: BOT_USERNAME
+        sync: false
+      - key: REFS_REQUIRED
+        value: "5"
